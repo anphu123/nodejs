@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var lab1_05Router = require('./routes/lab1');
 var lab1_05_1Router = require('./routes/lab1_1');
+var bai2Router= require('./routes/bai2');
 
 // Create an instance of the Express application
 var app = express();
@@ -30,6 +31,7 @@ app.use('/', indexRouter);  // Main application route
 app.use('/users', usersRouter);  // Users route
 app.use('/lab1', lab1_05Router);
 app.use('/lab1_1', lab1_05_1Router);  // Lab1 route
+app.use('/bai2',bai2Router);
 
 // 404 Error handler: Forward to the error handler below
 app.use(function(req, res, next) {
