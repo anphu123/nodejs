@@ -12,6 +12,8 @@ var lab1_05Router = require('./routes/lab1');
 var lab1_05_1Router = require('./routes/lab1_1');
 var bai2Router = require('./routes/bai2');
 var bai2_1Router = require('./routes/bai2_1'); // Corrected the router import
+var categoriesRouter = require('./routes/categories');
+var productsRouter = require('./routes/products');
 
 // Create an instance of the Express application
 var app = express();
@@ -30,6 +32,8 @@ app.use('/lab1', lab1_05Router);
 app.use('/lab1_1', lab1_05_1Router);
 app.use('/bai2', bai2Router);
 app.use('/bai2_1', bai2_1Router); // Corrected the route setup
+app.use('/categories', categoriesRouter);
+app.use('/products', productsRouter);
 
 // 404 Error handler: Forward to the error handler below
 app.use(function(req, res, next) {

@@ -25,6 +25,7 @@ router.post('/', (req, res) => {
     email: email,
     password: password
   };
+  
 
   // Add the new user to the array
   users.push(newUser);
